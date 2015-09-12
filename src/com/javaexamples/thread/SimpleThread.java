@@ -1,6 +1,10 @@
-import java.util.Date;
+package com.javaexamples.thread;
 
-public class HelloThread extends Thread {
+import java.util.Date;
+/* Simple example to understand multithreading in java
+ * @author Vineetha Indukuri
+ */
+public class SimpleThread extends Thread {
 
     public void run() {
         System.out.println("Hello from thread " + Thread.currentThread().getName());
@@ -14,13 +18,14 @@ public class HelloThread extends Thread {
     }
 
     public static void main(String args[]) throws InterruptedException {
-    	HelloThread ht1 = new HelloThread();
+    	SimpleThread ht1 = new SimpleThread();
         ht1.start();
-        HelloThread ht2 = new HelloThread();
+        SimpleThread ht2 = new SimpleThread();
         ht2.start();
         System.out.println("Thread " + Thread.currentThread().getName()+ (new Date()));
         System.out.println("Inside Main" + (new Date()));
         Thread.sleep(10000);
+        //main thread waits for the ht1 thread
         ht1.join();
         System.out.println("in main "+(new Date()));
     }
