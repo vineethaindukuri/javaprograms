@@ -8,9 +8,7 @@ public class CalcTest {
 	@Test	
 	public  void testCalcPositiveCase() throws InvalidInputException 
 	{
-		int expsum = 30;
-		int actsum = Calculation.addNumbers(10, 20);
-		Assert.assertEquals(actsum,expsum);
+		Assert.assertEquals(Calculation.addNumbers(10, 20),30);
 	}
 
 	@Test(expected=InvalidInputException.class)
