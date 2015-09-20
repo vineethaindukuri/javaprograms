@@ -41,18 +41,14 @@ public class AliasQueryParserTest {
 		
 		Assert.assertEquals(expectedResult, AliasQueryParser.getAliasedNameToRealNameHashMap(given));
 	}
-		@Test
-		public final void testGetAliasedNameToRealNameHashMap4() {
+	
+	@Test
+	public final void testGetAliasedNameToRealNameHashMap4() {
 			String given = "[Products]asP";
 			HashMap<String,String> expectedResult = new HashMap<String,String> ();
 			expectedResult.put(given,given);
-			
 			Assert.assertEquals(expectedResult, AliasQueryParser.getAliasedNameToRealNameHashMap(given));
-		
-		
 	}
-		
-
 }
 	
 
